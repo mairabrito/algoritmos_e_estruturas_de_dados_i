@@ -81,7 +81,7 @@ void exibirLista(struct arraylist* lista) {
     printf("]\n");
 }
 
-void inverterList (struct arraylist* lista, int n){
+void inverterLista (struct arraylist* lista, int n){
 
     int inicio = 0;
     int fim = n-1;
@@ -97,15 +97,43 @@ void inverterList (struct arraylist* lista, int n){
     }
 }
 
+void ordenarCrescente (struct arraylist* lista, int tamanho){
+    int temporariaTroca;
+
+    for(int i=0; i<tamanho; i++){
+        for(int j=i; j<tamanho; j++){
+            if(lista->vetor[j] < lista->vetor[i]){
+                temporariaTroca = lista->vetor[j];
+                lista->vetor[j] = lista->vetor[i];
+                lista->vetor[i] = temporariaTroca;
+            }
+        }
+    }
+}
+
+void ordenarDecrescente(struct arraylist* lista, int tamanho){
+    int temporariaTroca;
+    
+    for(int i=0; i<tamanho; i++){
+        for(int j=i; j<tamanho; j++){
+            if(lista->vetor[j] > lista->vetor[i]){
+                temporariaTroca = lista->vetor[j];
+                lista->vetor[j] = lista->vetor[i];
+                lista->vetor[i] = temporariaTroca;
+            }
+        }
+    }
+}
+
 
 int main(void){
     struct arraylist* lista = inicializar(5);
     inserirElementoNoFim(lista, 1);
-    inserirElementoNoFim(lista, 2);
-    inserirElementoNoFim(lista, 3);
     inserirElementoNoFim(lista, 4);
     inserirElementoNoFim(lista, 5);
     inserirElementoNoFim(lista, 6);
+    inserirElementoNoFim(lista, 2);
+    inserirElementoNoFim(lista, 48);
     inserirElementoNoFim(lista, 7);
     //inserirElementoNoFim(lista, 8);
     //inserirElementoNoFim(lista, 9);
@@ -115,18 +143,27 @@ int main(void){
     //printf("\n%d", obterElementoEmPosicao(lista, 10));
     
     exibirLista(lista);
-    inverterList(lista, lista->quantidade);
+    inverterLista(lista, lista->quantidade);
     //exibirLista(lista);
 
     inserirElementoEmPosicao(lista, 15, 3);
     exibirLista(lista);
    
-    removerElementoEmPosicao(lista, 3);
-    exibirLista(lista);
+    //removerElementoEmPosicao(lista, 3);
+    //exibirLista(lista);
    
-    removerElementoNoFim(lista);
+    //removerElementoNoFim(lista);
+    //exibirLista(lista);
+
+    ordenarCrescente(lista, lista->quantidade);
     exibirLista(lista);
 
-    //printf("%d", lista->vetor[8]);
+    //inserirElementoEmPosicao(lista, 45, 25);
+    //exibirLista(lista);
+
+    ordenarDecrescente(lista, lista->quantidade);
+    exibirLista(lista);
+    //printf("%d", lista->vetor[2]);
     return 0;
 };
+ 
