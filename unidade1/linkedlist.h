@@ -174,19 +174,3 @@ void inverterLista (struct linkedlist* lista){
     lista->cabeca = anterior;
 }
 
-void sortedInsert(struct Node** head, struct Node* newNode)
-{
-    struct Node dummy;
-    struct Node* current = &dummy;
-    dummy.next = *head;
- 
-    while (current->next != NULL && current->next->data < newNode->data) {
-        current = current->next;
-    }
- 
-    newNode->next = current->next;
-    current->next = newNode;
-    *head = dummy.next;
-}
-
-
