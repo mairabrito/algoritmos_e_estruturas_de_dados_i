@@ -1,0 +1,23 @@
+SelectionSort é um dos algoritmos de ordenação mais simples e intuitivo.
+
+Funcionamento
+    - out-of-place: Usa um array adicional, de mesmo tamanho. A ideia é percorrer o array em busca do menor valor e quando achar copiar o valor para o array adicional. Em seguida subtituir o valor que foi copiado por um valor MAX. Repetir o processo até que o array esteja com todos os valores ordenados.
+
+    tempo |	Array Original	        | Array Ordenado
+    t0	  | 8, 2, 4, 3, 7	        | VAZIO
+    t1	  | 8, MAX, 4, 3, 7         | 2
+    t2	  | 8, MAX, 4, MAX, 7	    | 2, 3
+    t3	  | 8, MAX, MAX, MAX, 7	    | 2, 3, 4
+    t4	  | 8, MAX, MAX, MAX, MAX   | 2, 3, 4, 7
+    t5	  | MAX, MAX, MAX, MAX, MAX | 2, 3, 4, 7, 8
+
+    - in-place: Quando usamos apenas variáveis para manipular o algoritmo. Percorremos o vetor em busca do melhor valor e trocamos de posição com o primeiro elemento. Em seguida percorremos o vetor novamente, mas começando da segunda posição, e quando encontrar o segundo menor, trocamos com a segunda posição. Da mesma forma com o terceiro menor, trocamos com o da terceira posição e assim por diante.
+
+    tempo |	Array Original	| Comentário
+    t0	  | 8, 2, 4, 3, 7	| vamos trocar o menor elemento, 2, com o elemento no índice 0, 8
+    t1	  | 2, 8, 4, 3, 7	| vamos trocar o segundo menor elemento, 3, com o elemento no índice 1, 8
+    t2	  | 2, 3, 4, 8, 7	| 4 é o terceiro menor elemento e já está na posição correta, por isso não precisaremos   fazer nada
+    t3    |	2, 3, 4, 8, 7	| vamos trocar o quarto e penúltimo menor elemento, 7, com o elemento no índice 3, 8
+    t4    |	2, 3, 4, 7, 8	| note que quando ordenamos n-1 elementos, o último elemento estará naturalmente ordenado, por isso, não precisamos fazer mais nada
+
+A performance do SelectionSort é O(n²), pois o pior caso seria percorrer o vetor do inicio ao fim, e no selectionsort é percorrido múltiplas vezes. 
