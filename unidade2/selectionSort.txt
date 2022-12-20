@@ -5,11 +5,11 @@ Funcionamento
 
     tempo |	Array Original	        | Array Ordenado
     t0	  | 8, 2, 4, 3, 7	        | VAZIO
-    t1	  | 8, MAX, 4, 3, 7         | 2
-    t2	  | 8, MAX, 4, MAX, 7	    | 2, 3
-    t3	  | 8, MAX, MAX, MAX, 7	    | 2, 3, 4
-    t4	  | 8, MAX, MAX, MAX, MAX   | 2, 3, 4, 7
-    t5	  | MAX, MAX, MAX, MAX, MAX | 2, 3, 4, 7, 8
+    t1	  | 8, MAX, 4, 3, 7             | 2
+    t2	  | 8, MAX, 4, MAX, 7	        | 2, 3
+    t3	  | 8, MAX, MAX, MAX, 7	        | 2, 3, 4
+    t4	  | 8, MAX, MAX, MAX, MAX       | 2, 3, 4, 7
+    t5	  | MAX, MAX, MAX, MAX, MAX     | 2, 3, 4, 7, 8
 
     - in-place: Quando usamos apenas variáveis para manipular o algoritmo. Percorremos o vetor em busca do menor valor e trocamos de posição com o primeiro elemento. Em seguida percorremos o vetor novamente, mas começando da segunda posição, e quando encontrar o segundo menor, trocamos com a segunda posição. Da mesma forma com o terceiro menor, trocamos com o da terceira posição e assim por diante.
 

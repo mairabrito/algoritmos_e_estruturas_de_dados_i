@@ -1,4 +1,5 @@
-Algoritmos de ordenação geralmete são classificados quando a:
+# Preview 
+    Algoritmos de ordenação geralmete são classificados quando a:
     - Complexidade de tempo;
     - Complexidade de espaço (ou uso de memória):
         - in-place (quantidade de memória usada é constante).
