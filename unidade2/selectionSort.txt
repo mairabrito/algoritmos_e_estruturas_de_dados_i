@@ -11,7 +11,7 @@ Funcionamento
     t4	  | 8, MAX, MAX, MAX, MAX   | 2, 3, 4, 7
     t5	  | MAX, MAX, MAX, MAX, MAX | 2, 3, 4, 7, 8
 
-    - in-place: Quando usamos apenas variáveis para manipular o algoritmo. Percorremos o vetor em busca do melhor valor e trocamos de posição com o primeiro elemento. Em seguida percorremos o vetor novamente, mas começando da segunda posição, e quando encontrar o segundo menor, trocamos com a segunda posição. Da mesma forma com o terceiro menor, trocamos com o da terceira posição e assim por diante.
+    - in-place: Quando usamos apenas variáveis para manipular o algoritmo. Percorremos o vetor em busca do menor valor e trocamos de posição com o primeiro elemento. Em seguida percorremos o vetor novamente, mas começando da segunda posição, e quando encontrar o segundo menor, trocamos com a segunda posição. Da mesma forma com o terceiro menor, trocamos com o da terceira posição e assim por diante.
 
     tempo |	Array Original	| Comentário
     t0	  | 8, 2, 4, 3, 7	| vamos trocar o menor elemento, 2, com o elemento no índice 0, 8

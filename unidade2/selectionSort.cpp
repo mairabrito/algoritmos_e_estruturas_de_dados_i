@@ -35,6 +35,7 @@ void selectionSortOut (int *vDesordenado, int tamanho){
                 menor = j;
             }
         }
+        
         vOrdenado[i] = vDesordenado[menor];
         vDesordenado[menor] = MAX;
     }
